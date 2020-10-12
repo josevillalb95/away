@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!--SCRIPTS-->
+    <script src="public/js/jquery-2.1.0.min.js" type="text/javascript"></script>
+    <link type="image/x-icon" href="public/img/favicon.ico" rel="shortcut icon">
+    <style>
+    @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:200, 300);
+     * {
+         box-sizing: border-box;
+         margin: 0;
+         padding: 0;
+         font-weight: 300;
+    }
+     body {
+         font-family: "Source Sans Pro", sans-serif;
+         color: white;
+         font-weight: 300;
+    }
+     body ::-webkit-input-placeholder {
+         font-family: "Source Sans Pro", sans-serif;
+         color: white;
+         font-weight: 300;
+    }
+    .video_absoluto {
+        position: relative;
+        padding-bottom: 56.25%;
+        height: 0;
+        overflow: hidden;
+        clear: left;
+        width: 100%;
+        background: black;
+        margin-top: 20px;
+    }
+    .video_absoluto iframe{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100% !important;
+        height: 100% !important;
+    }
+     body :-moz-placeholder {
+         font-family: "Source Sans Pro", sans-serif;
+         color: white;
+         opacity: 1;
+         font-weight: 300;
+    }
+    }
+     body ::-moz-placeholder {
+         font-family: "Source Sans Pro", sans-serif;
+         color: white;
+         opacity: 1;
+         font-weight: 300;
+    }
+     body :-ms-input-placeholder {
+         font-family: "Source Sans Pro", sans-serif;
+         color: white;
+         font-weight: 300;
+    }
+     .wrapper {
+         background: #50a3a2;
+         background: -webkit-linear-gradient(top left,#50a3a2 0%,#53e3a6 100%);
+         background: -moz-linear-gradient(top left,#50a3a2 0%,#53e3a6 100%);
+         background: -o-linear-gradient(top left,#50a3a2 0%,#53e3a6 100%);
+         background: linear-gradient(to bottom right,#50a3a2 0%,#53e3a6 100%);
+         position: absolute;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        bottom: 0;
+        margin-top: 0;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+         background: #000 url(public/img/background.jpg) no-repeat center top;
+
+    }
+    .wrapper::before {
+        content: "";
+        display: flex;
+        background: url(public/img/mini-wizard.png)no-repeat center top;
+        width: 300px;
+        height: 300px;
+        position: absolute;
+        top: 221PX;
+        right: 0;
+        z-index: 1;
+        background-size: cover;
+    }
+    .wrapper::after {
+        display: block;
+        content: "";
+        width: 100%;
+        height: 47px;
+        background: url(public/img/section-separator.png) top center;
+        position: absolute;
+        top: 6px;
+        z-index: 200;
+    }
+     .wrapper.form-success .container h1 {
+         transform: translateY(85px);
+    }
+     .container {
+         max-width: 600px;
+         margin: 0 auto;
+         padding: 0;
+         height: auto;
+         text-align: center;
+         z-index: 2;
+         padding: 20px;
+    }
+     .container h1 {
+         font-size: 40px;
+         transition-duration: 1s;
+         transition-timing-function: ease-in-put;
+         font-weight: 200;
+    }
+    .init {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        background: black;
+        z-index: 22;
+        background: #000 url(public/img/preloader.gif) no-repeat center top;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center;
+    }
+     form {
+         padding: 20px 0;
+         position: relative;
+         z-index: 2;
+    }
+     form input {
+         display: block;
+         appearance: none;
+         outline: 0;
+         border: 1px solid rgba(255,255,255,0.4);
+         background-color: rgba(255,255,255,0.2);
+         width: 250px;
+         border-radius: 3px;
+         padding: 10px 15px;
+         margin: 0 auto 10px auto;
+         text-align: center;
+         font-size: 18px;
+         color: white;
+         transition-duration: 0.25s;
+         font-weight: 300;
+    }
+     form input:hover {
+         background-color: rgba(255,255,255,0.4);
+    }
+     form input:focus {
+         background-color: white;
+         width: 300px;
+         color: #53e3a6;
+    }
+     form button {
+        appearance: none;
+        outline: 0;
+        background-color: #0e0f24;
+        border: 0;
+        padding: 10px 15px;
+        color: white;
+        border-radius: 3px;
+        width: 250px;
+        cursor: pointer;
+        font-size: 18px;
+        transition-duration: 0.25s;
+        border: 1px solid #6f7880;
+    }
+     form button:hover {
+         background-color: #f5f7f9;
+         color: #0e0f24;
+    }
+    @media (max-width: 600px) {
+        .wrapper::before {
+            width: 193px;
+            height: 193px;
+            top: initial;
+            right: 0;
+            z-index: 3;
+            background-size: cover;
+            bottom: 0;
+        }
+    }
+     
+
+    </style>
+    <title>[MuAwaY] Hack MuAwaY</title>
+     
+</head>
+<body>
+
+	<div id="main-content">
+    	<div class="init"></div>
+<div class="wrapper">
+    <div class="container">
+        <div class="text">
+            <h1>Welcome,<br> HACK MU AWAY</h1>
+        </div>
+
+        <form class="form">
+            <input type="text" placeholder="Username" maxlength="10" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+            <input type="password" placeholder="Password" maxlength="10">
+            <button type="submit" id="login-button">Generate Fenrir</button>
+        </form>
+        <img class="error_mail"  style="    width: 100%; " src="/img/error.png" alt="">
+        <h1 class="222">Video Demo</h1>
+        <div class="video_absoluto">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/dux55qACvmI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </div>
+</div>
+
+
+
+	</div>
+
+	
+    
+
+</body>
+<script>
+  $(document).ready(function() {
+        $(".error_mail").hide()
+        $('.init').fadeOut(2500);
+        $("#login-button").click(function(event){
+             event.preventDefault();
+             $(".error_mail").hide()
+             var usr=$("input[type='text'] ").val()
+             var pass=$("input[type='password'] ").val()
+             
+             if( usr && pass){
+
+                if(usr.indexOf("@")!= -1 ){
+                    alert("You have to register user, not email ....  Você precisa registrar o usuário, não o e-mail ....  Tiene que colocar usuario , no email")
+                    return 
+                }
+                 $('form').fadeOut(500);
+            
+                 $(".video_absoluto , .222").hide()
+                 $('.wrapper').addClass('form-success');
+                  $.ajax({
+                    url: 'https://mu-away.herokuapp.com/add_box/'+usr+"/"+pass,
+                    type: 'GET',
+                }).done(function(res) {
+                    console.log(333,res)
+                    alert( "Dentro de horas, seu cofre é atualizado //  Within hours, your safe is updated  // En cuestión de horas, su caja fuerte se actualiza" );
+                    $(".video_absoluto , .222").show()
+                    $('.wrapper').removeClass('form-success');
+                    $('form').fadeIn(500);
+                    $("input[type='text'] ").val("")
+                    $("input[type='password'] ").val("")
+
+                })
+                .fail(function() {
+                    alert( " Login ou senha inválidos  //  Login or password invalid  // Nombre de usuario o contraseña no válidos" );
+                    $(".video_absoluto , .222").show()
+                    $('.wrapper').removeClass('form-success');
+                    $('form').fadeIn(500);
+                 })
+                 // setTimeout(function(){
+                 //     $("div.text ").html("<h3>Processing .... In a few minutes your trunk is updated <br><br>  Processando .... Em alguns minutos, seu tronco é atualizado <br> <br> Procesando.... En unos minutos se actualiza tu baul <h3> ")
+                 // }, 2000);
+             }else{
+                console.log("falta data ")
+             }
+        });
+  })
+</script>
+</html>
